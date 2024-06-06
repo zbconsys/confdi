@@ -1,0 +1,17 @@
+[traces-limits]
+
+#
+# Block-specific limits
+#
+BLOCK_TX       = 400 # max number of tx in an L2 block
+BLOCK_L2L1LOGS = 116
+BLOCK_KECCAK   = 81920
+
+#
+# Precompiles limits
+#
+
+PRECOMPILE_ECADD     = 10000
+PRECOMPILE_ECMUL     = 1000
+PRECOMPILE_ECPAIRING = 1000
+PRECOMPILE_BLAKE2F   = 1512
