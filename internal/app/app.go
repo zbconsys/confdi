@@ -121,6 +121,11 @@ func (a *App) processToml(def io.Reader, overr io.Reader) ([]byte, error) {
 						"override", fmt.Sprintf("%s=%v", overrideKey, overrideVal),
 					)
 					dValMap[overrideKey] = overrideVal
+				} else {
+					a.log.Info("adding new config from override",
+						"config", fmt.Sprintf("%s=%v", overrideKey, overrideVal),
+					)
+					dValMap[overrideKey] = overrideVal
 				}
 			}
 

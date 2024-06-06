@@ -81,6 +81,9 @@ PRECOMPILE_ECADD     = 10000
 PRECOMPILE_ECMUL     = 1000
 PRECOMPILE_ECPAIRING = 1000
 PRECOMPILE_BLAKE2F   = 1512
+
+ADDITIONAL_VAL_1 = "test1"
+ADDITIONAL_VAL_2 = 2
 `
 	a := App{
 		log: &mockLogger{},
@@ -113,4 +116,8 @@ PRECOMPILE_BLAKE2F   = 1512
 	assert.Equal(t, int64(524286), dataMap["ADD"])
 	assert.Equal(t, int64(262128), dataMap["BIN"])
 	assert.Equal(t, int64(262144), dataMap["BIN_RT"])
+
+	// new values
+	assert.Equal(t, "test1", dataMap["ADDITIONAL_VAL_1"])
+	assert.Equal(t, int64(2), dataMap["ADDITIONAL_VAL_2"])
 }
